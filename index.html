@@ -20,13 +20,23 @@
             <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
-        <a-marker id="animated-marker" type='barcode' value='6'>
+        <a-marker-camera id="animated-marker" type='pattern' url='./pattern-simple-square-logo-design-png_100146.pattt'>
             <a-entity
                 animation-mixer
                 gltf-model="#animated-asset"
                 scale="2 2 2">
             </a-entity>
-        </a-marker>
+
+        </a-marker-camera>
+
+
+        <!-- <a-marker id="animated-marker" type='barcode' value='6'>
+            <a-entity
+                animation-mixer
+                gltf-model="#animated-asset"
+                scale="2 2 2">
+            </a-entity>
+        </a-marker> -->
 
         <a-entity camera></a-entity>
         </a-scene>
