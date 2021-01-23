@@ -35,7 +35,7 @@
         <img id="imageOne" src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
         </a-assets>
         
-        <a-marker preset='hiro'>
+        <a-marker-camera preset='hiro'>
         <a-entity id="parent" position="0 0.5 0">
           <a-plane markerhandler position="0 0.0 0" rotation="-90 0 0" height="1" width="1"  src="#imageOne"></a-plane>
           <a-text rotation="-90 0 0"
@@ -45,7 +45,7 @@
         </a-entity>
         <a-box id ="boxId" position="-3 0 0" rotation="0 0 0" color="#4CC3D9"></a-box>
       <!-- define a camera which will move according to the marker position -->
-    </a-marker>
+    </a-marker-camera>
 
       <a-camera><a-cursor></a-cursor></a-camera>
 
