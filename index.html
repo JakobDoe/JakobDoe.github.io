@@ -44,11 +44,19 @@
 
 
 
-  <script>
-    $("#testOne").on("click", function() {
-      window.open("https://www.google.com/", "_blank");
-    });
+  <script type="text/javascript">
+ 
     
+    document.getElementById('testOne').addEventListener('click', function (evt) {
+      window.location.href = 'http://www.google.com';
+    });
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
