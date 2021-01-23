@@ -37,19 +37,26 @@
       </a-text>
     </a-entity>
 
-    <a-box position="-3 0 0" rotation="0 0 0" color="#4CC3D9"></a-box>
+    <a-box id ="deppateBox" position="-3 0 0" rotation="0 0 0" color="#4CC3D9"></a-box>
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 
 
 
-  <script type="text/javascript">
- 
-    
-    document.getElementById('testOne').addEventListener('click', function (evt) {
-      window.location.href = 'http://www.google.com';
-    });
+  
+
+<script type="text/javascript">
+      AFRAME.registerComponent('startButton', {
+      init: function () {
+          var cube = document.querySelector("#deppateBox");
+          cube.addEventListener("click",function(evt){
+            window.location.href = 'http://www.google.com';
+          });
+         
+      }
+      });
+</script>
 
 
 
@@ -57,6 +64,5 @@
 
 
 
-    </script>
 </body>
 </html>
