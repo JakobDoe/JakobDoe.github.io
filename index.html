@@ -4,8 +4,9 @@
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
 
-<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
 
+<!-- import events.js script -->
+<script src="click_handler.js"></script>
 
 <!-- support 3D text -->
 <script src="js/aframe-text-geometry-component.min.js"></script>
@@ -22,7 +23,7 @@
 	
 
 	<!-- 3D text new  -->
-	<a-marker type="pattern" url="data/hiro.patt" cursor="rayOrigin: mouse">
+	<a-marker cursor-listener emitevents="true" cursor="rayOrigin: mouse" type="pattern" url="data/hiro.patt" cursor="rayOrigin: mouse">
 
 		<!-- 
 			using aframe-text-geometry component
@@ -39,7 +40,7 @@
 			material="color: silver; src: #pixels; repeat: 0.5 0.5;" 
 			rotation="-90 0 0"
       position= "3 0 1"
-      href="http://floral.at">
+      id="Click-Text">
 		</a-entity>
 
 	</a-marker>
