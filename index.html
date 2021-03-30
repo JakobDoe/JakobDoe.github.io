@@ -19,10 +19,10 @@
 		<img id="pixels" src="images/pixels.png" />
 	</a-assets>
 
-	<a-entity camera look-controls>
+	
 
 	<!-- 3D text new  -->
-	<a-marker type="pattern" url="data/hiro.patt">
+	<a-marker type="pattern" url="data/hiro.patt" cursor="rayOrigin: mouse">
 
 		<!-- 
 			using aframe-text-geometry component
@@ -45,12 +45,8 @@
 	</a-marker>
 
   
-    <a-entity cursor="fuse: true; fuseTimeout: 500"
-              position="0 0 -1"
-              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-              material="color: black; shader: flat">
-    </a-entity>
-  </a-entity>
+    <a-entity camera></a-entity>
+  
     
 </a-scene>
 </body>
