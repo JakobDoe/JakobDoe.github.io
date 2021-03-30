@@ -3,6 +3,9 @@
 
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
+<!-- support hrefs -->
+<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
+
 
 <!-- support 3D text -->
 <script src="js/aframe-text-geometry-component.min.js"></script>
@@ -35,12 +38,18 @@
     <a-entity text-geometry="value: Döller; font: #exoFont; bevelSize: 6;"
 			material="color: silver; src: #pixels; repeat: 0.5 0.5;" 
 			rotation="-90 0 0"
-      position= "3 0 1">
+      position= "3 0 1"
+      href="http://floral.at">
 		</a-entity>
 
 	</a-marker>
 
-    <a-entity camera></a-entity>
+    <a-entity>
+
+      <a-camera>
+        <a-cursor color="#4CC3D9"></a-cursor>
+      <a-camera>
+    </a-entity>
     
 </a-scene>
 </body>
