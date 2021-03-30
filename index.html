@@ -16,15 +16,12 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='sourceType: webcam;'
   >
-    <a-entity
-          rotation="-90 0 0"
-          geometry="primitive: plane; width: 4; height: auto"
-          material="color: blue"
-          text="value: Jakob Doeller\n Alexandria"
-          >
-          
-        
-    </a-entity>
+    <a-text 
+      value="Jakob Doeller" 
+      geometry="primitive:plane"
+      position="6 0 0">
+
+    </a-text>
 
       <a-image src="simple-square-logo-design-png_100146.jpg" rotation="-90 0 0">
 
