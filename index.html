@@ -4,7 +4,7 @@
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
 
-<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
 
 <!-- import events.js script -->
 <script src="click_handler.js"></script>
@@ -14,7 +14,7 @@
 
 <body style="margin: 0px; overflow: hidden;">
 
-<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse">
 
 	<a-assets>
 		<a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
@@ -24,7 +24,7 @@
 	
 
 	<!-- 3D text new  -->
-	<a-marker cursor-listener emitevents="true" cursor="rayOrigin: mouse" type="pattern" url="data/hiro.patt">
+	<a-marker cursor-listener type="pattern" url="data/hiro.patt">
 
 		<!-- 
 			using aframe-text-geometry component
@@ -51,7 +51,7 @@
 	</a-marker>
 
   
-    <a-entity camera look-controls mouse-cursor></a-entity>
+    <a-entity camera></a-entity>
   
     
 </a-scene>
