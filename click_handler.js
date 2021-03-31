@@ -8,7 +8,8 @@ AFRAME.registerComponent('markerhandler', {
       // every click, we make our model grow in size :)
       animatedMarker.addEventListener('click', function(ev, target){
           const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-          window.location = "http://www.google.com/";
+          if (aEntity && intersectedElement === aEntity) {
+            window.location = "http://www.google.com/";
           }
       });
 }});
