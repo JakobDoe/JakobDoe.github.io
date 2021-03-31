@@ -6,6 +6,7 @@
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+	<script src="js/aframe-text-geometry-component.min.js"></script>
     
     <!-- import events.js script -->
     <script src="click_handler.js"></script>
@@ -16,6 +17,8 @@
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/models/CesiumMan.gltf"></a-asset-item>
+			<a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
+			<img id="pixels" src="images/pixels.png" />
         </a-assets>
 
         <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" preset='hiro'>
