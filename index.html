@@ -27,14 +27,22 @@
                 gltf-model="#animated-asset"
                 scale="2">
             </a-entity>
-			<a-entity text-geometry="value: Jakob; font: #exoFont; bevelSize: 6;"
+			<a-entity 
+				id="animated-text"	
+				text-geometry="value: Jakob; font: #exoFont; bevelSize: 6;"
 				material="color: silver; src: #pixels; repeat: 0.5 0.5;" 
 				rotation="-90 0 0"
       			position= "3 0 0"
-				id="animated-text"
 				>
 				
-		</a-entity>
+			</a-entity>
+			<a-entity text-geometry="value: Doeller; font: #exoFont; bevelSize: 6;"
+				material="color: silver; src: #pixels; repeat: 0.5 0.5;" 
+				rotation="-90 0 0"
+      			position= "3 0 -1.5"
+				>
+				
+			</a-entity>
 		
         </a-marker>
 
