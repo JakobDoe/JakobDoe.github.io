@@ -10,10 +10,10 @@ AFRAME.registerComponent('markerhandler', {
               animatedMarker.addEventListener('click', function(ev, target){
                   const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
                   if (aEntity && intersectedElement === aEntity) {
-                    window.location = "https://stackoverflow.com/questions/6452502/adding-click-event-handler-to-iframe";
+                    window.location = "http://google.com";
                   }
                   if (newEntity && intersectedElement === newEntity) {
-                    window.location = "https://google.com";
+                    window.location = "http://floral.at";
                   }
               });
         }
