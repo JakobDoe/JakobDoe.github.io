@@ -35,9 +35,9 @@ AFRAME.registerComponent('crazystuff', {
       
 
       // every click, we make our model grow in size :)
-      crazycomponent.addEventListener('click', function(ev, target){
+      crazycomponent.addEventListener('click', function(){
           
-            window.location = "http://folral.at";
+            window.location = "http://floral.at";
           }
           
       );
