@@ -27,4 +27,32 @@ AFRAME.registerComponent('markerhandler', {
 
 });
 
+AFRAME.registerComponent('crazystuff', {
+
+  init: function() {
+      const crazycomponent = document.querySelector("#doellerjak");
+     
+      
+
+      // every click, we make our model grow in size :)
+      crazycomponent.addEventListener('click', function(ev, target){
+          
+            window.location = "http://folral.at";
+          }
+          
+      );
+}
+
+
+
+
+
+
+
+
+
+
+});
+
+
 
