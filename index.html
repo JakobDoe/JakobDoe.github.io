@@ -4,7 +4,7 @@
 <script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>
 
-<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 
 <!-- import events.js script -->
 <script src="click_handler.js"></script>
@@ -24,7 +24,7 @@
 	
 
 	<!-- 3D text new  -->
-	<a-marker cursor-listener type="pattern" url="data/hiro.patt">
+	<a-marker cursor-listener emitevents="true" cursor="rayOrigin: mouse" type="pattern" url="data/hiro.patt">
 
 		<!-- 
 			using aframe-text-geometry component
@@ -51,14 +51,7 @@
 	</a-marker>
 
   
-    <a-entity camera look-controls>
-		<a-entity cursor="fuse: true; fuseTimeout: 500"
-				  position="0 0 -1"
-				  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-				  material="color: black; shader: flat"
-				  emitevents="true">
-		</a-entity>
-	  </a-entity>
+    <a-entity camera look-controls mouse-cursor>
   
     
 </a-scene>
