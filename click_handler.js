@@ -16,11 +16,22 @@ AFRAME.registerComponent('markerhandler', {
               });
         }
 
-        function iframeclick() {
-          document.getElementById("theiframe").contentWindow.document.body.onclick = function() {
-            window.location = "http://www.floral.at/";
+        init: function() {
+          const newAnimatedMarker = document.querySelector("#animated-marker");
+          const newaEntity = document.querySelector("#theiframe");
+
+          // every click, we make our model grow in size :)
+          newAnimatedMarker.addEventListener('click', function(newev, newtarget){
+              const newintersectedElement = newev && newev.detail && newev.detail.intersectedEl;
+              if (newaEntity && newintersectedElement === newaEntity) {
+                window.location = "https://floral.at";
+
+
               }
-          }
+          });
+    }
+
+        
 
 
 
