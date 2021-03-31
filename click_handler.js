@@ -10,6 +10,8 @@ AFRAME.registerComponent('markerhandler', {
           const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
           if (aEntity && intersectedElement === aEntity) {
             window.location = "http://www.google.com/";
+
+            
           }
       });
 }});
