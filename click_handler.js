@@ -17,42 +17,30 @@ AFRAME.registerComponent('markerhandler', {
         }
 
 
-        
-
-
-
-
-
-
 
 });
 
-AFRAME.registerComponent('crazystuff', {
+AFRAME.registerComponent('markerhandler', {
 
   init: function() {
-      const crazycomponent = document.querySelector("#doellerjak");
-     
+      const animatedMarker = document.querySelector("#animated-marker");
+      const aModel = document.querySelector("#animated-text");
       
 
       // every click, we make our model grow in size :)
-      crazycomponent.addEventListener('click', function(){
-          
+      animatedMarker.addEventListener('click', function(ev, target){
+          const intersectedElementModel = ev && ev.detail && ev.detail.intersectedEl;
+          if (aModel && intersectedElementModel === aModel) {
             window.location = "http://floral.at";
           }
           
-      );
+      });
 }
 
 
 
-
-
-
-
-
-
-
 });
+
 
 
 
