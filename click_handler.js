@@ -4,12 +4,17 @@ AFRAME.registerComponent('markerhandler', {
           init: function() {
               const animatedMarker = document.querySelector("#animated-marker");
               const aEntity = document.querySelector("#animated-model");
+              const aModel = document.querySelector("#animated-text");
+      
               
 
               // every click, we make our model grow in size :)
               animatedMarker.addEventListener('click', function(ev, target){
                   const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
                   if (aEntity && intersectedElement === aEntity) {
+                    window.location = "http://google.com";
+                  }
+                  if (aModel && intersectedElement === aModel) {
                     window.location = "http://google.com";
                   }
                   
@@ -20,26 +25,7 @@ AFRAME.registerComponent('markerhandler', {
 
 });
 
-AFRAME.registerComponent('markerhandler', {
 
-  init: function() {
-      const animatedMarker = document.querySelector("#animated-marker");
-      const aModel = document.querySelector("#animated-text");
-      
-
-      // every click, we make our model grow in size :)
-      animatedMarker.addEventListener('click', function(ev, target){
-          const intersectedElementModel = ev && ev.detail && ev.detail.intersectedEl;
-          if (aModel && intersectedElementModel === aModel) {
-            window.location = "http://floral.at";
-          }
-          
-      });
-}
-
-
-
-});
 
 
 
