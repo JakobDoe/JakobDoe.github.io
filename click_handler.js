@@ -19,7 +19,7 @@ AFRAME.registerComponent('markerhandler', {
                     window.location = "http://floral.at";
                   }
                   if (aPhone && intersectedElement === aPhone) {
-                    window.location = "tel:00436761234567";
+                    document.location.href = "tel:00436761234567";
                   }
                   
               });
