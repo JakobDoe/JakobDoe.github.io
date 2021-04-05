@@ -15,7 +15,7 @@ AFRAME.registerComponent('markerhandler', {
                     window.location = "http://google.com";
                   }
                   if (aModel && intersectedElement === aModel) {
-                    window.location = "http://google.com";
+                    window.location = "http://floral.at";
                   }
                   
               });
