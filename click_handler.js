@@ -5,6 +5,7 @@ AFRAME.registerComponent('markerhandler', {
               const animatedMarker = document.querySelector("#animated-marker");
               const aEntity = document.querySelector("#animated-model");
               const aModel = document.querySelector("#animated-text");
+              const aPhone = document.querySelector("#PhoneJak");
       
               
 
@@ -17,10 +18,13 @@ AFRAME.registerComponent('markerhandler', {
                   if (aModel && intersectedElement === aModel) {
                     window.location = "http://floral.at";
                   }
+                  if (aPhone && intersectedElement === aPhone) {
+                    window.location = "tel:00436761234567";
+                  }
                   
               });
         }
-
+        
 
 
 });
