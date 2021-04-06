@@ -27,6 +27,11 @@ AFRAME.registerComponent('markerhandler', {
                   }
               });
         }
+
+
+        function goToWebpage() {
+          window.location = "https://www.itworks.co.at/";
+        }
         
 
 
