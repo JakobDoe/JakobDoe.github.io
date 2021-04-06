@@ -6,6 +6,7 @@
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://unpkg.com/aframe-lerp-component/dist/aframe-lerp-component.min.js"></script>
 	<script src="js/aframe-text-geometry-component.min.js"></script>
     
     <!-- import events.js script -->
@@ -23,11 +24,13 @@
 
         <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" preset='hiro'>
             <a-entity
+                lerp="properties: position, rotation, scale"
                 id="animated-model"
                 gltf-model="#animated-asset"
                 scale="2">
             </a-entity>
-            <a-image 
+            <a-image
+                lerp="properties: position, rotation, scale" 
                 id="phoneicon"
                 src="Icon_Phone.png" 
                 rotation="-90 0 0"
@@ -36,6 +39,7 @@
                 width="1"
                 ></a-image>
             <a-text
+                lerp="properties: position, rotation, scale"
                 id="phonenumber" 
                 text="value: 0676/1234567" 
                 color="white"
@@ -44,14 +48,16 @@
                 position= "0 0 2"
                 >
             </a-text>
-            <a-image 
+            <a-image
+                lerp="properties: position, rotation, scale" 
                 src="Picture_Person.png" 
                 rotation="-90 0 0"
                 position= "2.8 0 -0.5"
                 height="2"
                 width="2"
                 ></a-image>
-			<a-entity 
+			<a-entity
+                lerp="properties: position, rotation, scale" 
                 id="animated-text"
 				text-geometry="value: Jakob; font: #exoFont; bevelSize: 6;"
 				material="color: white; src: #pixels; repeat: 0.5 0.5;" 
@@ -59,7 +65,8 @@
       			position= "4.1 0 -0.5"
 				>
             </a-entity>
-            <a-entity 
+            <a-entity
+                lerp="properties: position, rotation, scale" 
 				text-geometry="value: Doeller; font: #exoFont; bevelSize: 6;"
 				material="color: white; src: #pixels; repeat: 0.5 0.5;" 
 				rotation="-90 0 0"
