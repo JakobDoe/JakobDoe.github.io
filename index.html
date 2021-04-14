@@ -23,40 +23,54 @@
 			<a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
 			<img id="pixels" src="images/pixels.png" />
         </a-assets>
+   <!-- Hier müssen noch die Details für den "smooth" paramter eingestellt werden; die Standardsettings machen die bewwgungen zu langsam -->
 
         <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" preset='hiro' smooth="true">
+   <!-- Hier ist im Moment ein Test 3D model verbaut, soll entfernt/ausgetauscht werden. -->
             <a-entity
                 id="animated-model"
                 gltf-model="#animated-asset"
                 scale="2">
             </a-entity>
+    <!-- Icon und Text zu Telefonnummer -->
             <a-image
-                id="phoneicon"
+                navigate-on-click="url: tel:00436761234567"    
                 src="Icon_Phone.png" 
                 rotation="-90 0 0"
-                position= "-1 0 2"
-                height="1"
-                width="1"
+                position= "-1 0 1.2"
+                height="0.6"
+                width="0.6"
                 ></a-image>
-            <a-image
-                navigate-on-click="url: http://floral.at"    
-                src="Icon_Phone.png" 
-                rotation="-90 0 0"
-                position= "-1 0 3"
-                height="1"
-                width="1"
-                ></a-image>
-
-
             <a-text
+                navigate-on-click="url: tel:00436761234567"    
                 id="phonenumber" 
                 text="value: 0676/1234567" 
                 color="white"
-                width="12"                
+                width="8"                
                 rotation="-90 0 0"
-                position= "0 0 2"
+                position= "0 0 1.2"
                 >
             </a-text>
+    <!-- Icon und Text zu LinkedIn -->
+                <a-image
+                navigate-on-click="url: https://www.linkedin.com/in/jakob-d%C3%B6ller-7434b2136/?originalSubdomain=at"    
+                src="Icon_LinkedIn.png" 
+                rotation="-90 0 0"
+                position= "-1 0 2.4"
+                height="0.6"
+                width="0.6"
+                ></a-image>
+                <a-text
+                    navigate-on-click="url: https://www.linkedin.com/in/jakob-d%C3%B6ller-7434b2136/?originalSubdomain=at"    
+                    id="phonenumber" 
+                    text="value: LinkedIn" 
+                    color="white"
+                    width="8"                
+                    rotation="-90 0 0"
+                    position= "0 0 2.4"
+                    >
+                </a-text>
+
             <a-image
                 src="Picture_Person.png" 
                 rotation="-90 0 0"
@@ -69,14 +83,14 @@
 				text-geometry="value: Jakob; font: #exoFont; bevelSize: 6;"
 				material="color: white; src: #pixels; repeat: 0.5 0.5;" 
 				rotation="-90 0 0"
-      			position= "4.1 0 -0.5"
+      			position= "2.5 0 -0.5"
 				>
             </a-entity>
             <a-entity
 				text-geometry="value: Doeller; font: #exoFont; bevelSize: 6;"
 				material="color: white; src: #pixels; repeat: 0.5 0.5;" 
 				rotation="-90 0 0"
-      			position= "4.1 0 0.1"
+      			position= "2.5 0 0.1"
 				>	
 			</a-entity>
 		
