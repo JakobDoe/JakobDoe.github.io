@@ -8,8 +8,7 @@
     <!-- AR.js importieren -->
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script src="https://unpkg.com/aframe-lerp-component/dist/aframe-lerp-component.min.js"></script>
-	<script src="js/aframe-text-geometry-component.min.js"></script>
+  
     <!-- Library, die Click events handeln kann. -->
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 
@@ -19,12 +18,6 @@
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-
-        <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/models/CesiumMan.gltf"></a-asset-item>
-			<a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
-			<img id="pixels" src="images/pixels.png" />
-        </a-assets>
    <!-- Hier müssen noch die Details für den "smooth" paramter eingestellt werden; die Standardsettings machen die bewwgungen zu langsam -->
 
         <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse; objects: .clickable" id="animated-marker" preset='hiro' smooth="true">
@@ -124,6 +117,14 @@
                 position= "1.1 0.1 0.3"
                 >
             </a-text> 
+            <a-text
+                text="value:Requirements Engineer" 
+                color="white"
+                width="3"                
+                rotation="-90 0 0"
+                position= "1.1 0.1 0.5"
+                >
+            </a-text>             
 
 			<!-- <a-entity
                 id="animated-text"
