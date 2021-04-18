@@ -20,7 +20,7 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
    <!-- Hier müssen noch die Details für den "smooth" paramter eingestellt werden; die Standardsettings machen die bewwgungen zu langsam -->
 
-        <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse; objects: .clickable" id="animated-marker" preset='hiro' smooth="true">
+        <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse" id="animated-marker" preset='hiro' smooth="true">
     <!-- Icon und Text zu Telefonnummer -->
             <a-image
                 navigate-on-click="url: tel:00436761234567"    
