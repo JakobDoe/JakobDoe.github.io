@@ -44,11 +44,6 @@ AFRAME.registerComponent('navigate-on-click', {
     var el = this.el;
 
 
-    this.tick = AFRAME.utils.throttleTick(this.tick, 500, this);
-    tick: function(t, dt) { 
-      if(document.querySelectorAll("PicturePerson") !== undefined )
-      {var vv = document.querySelector('a-marker'); vv.setAttribute('raycaster',"objects: .clickable"); vv.setAttribute( 'cursor',"rayOrigin: mouse"); vv.setAttribute( 'cursor',"fuse: false"); }
-    }
 
     el.addEventListener('click', function () {
       window.location.href = data.url;
