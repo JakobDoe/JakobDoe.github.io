@@ -17,10 +17,12 @@
     
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' renderer="logarithmicDepthBuffer: true;"
+        >
    <!-- Hier müssen noch die Details für den "smooth" paramter eingestellt werden; die Standardsettings machen die bewwgungen zu langsam -->
 
-        <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse" id="animated-marker" preset='hiro' smooth="true">
+        <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse" id="animated-marker" preset='hiro' smooth="true" raycaster="objects: .clickable"
+        >
     <!-- Icon und Text zu Telefonnummer -->
             <a-image
                 navigate-on-click="url: tel:00436761234567"    
@@ -43,6 +45,7 @@
             <a-image
                 navigate-on-click="url: https://www.linkedin.com/in/jakob-d%C3%B6ller-7434b2136/?originalSubdomain=at"    
                 src="Icon_LinkedIn.png" 
+                class="clickable"
                 rotation="-90 0 0"
                 position= "-0.34 0.1 0.9"
                 height="0.4"
@@ -62,6 +65,7 @@
     <!-- Icon und Text zu Facebook -->
             <a-image
                 navigate-on-click="url: https://www.facebook.com/jakob.doller"    
+                class="clickable"
                 src="Icon_Facebook.png" 
                 rotation="-90 0 0"
                 position= "0.21 0.1 0.9"
