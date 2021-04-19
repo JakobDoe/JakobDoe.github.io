@@ -34,17 +34,12 @@
 
 // });
 
-AFRAME.registerComponent('navigate-on-click', {
-  schema: {
-    url: {default: ''}
-  },
+AFRAME.registerComponent('navigate-on-clicking', {
+  
 
   init: function () {
-    var data = this.data;
-    var el = this.el;
-
     el.addEventListener('mousedown', function () {
-      window.location.href = data.url;
+      window.location = "http://floral.at";
     });
   }
 });  
