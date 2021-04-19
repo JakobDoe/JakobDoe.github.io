@@ -34,15 +34,15 @@
 
 // });
 
-AFRAME.registerComponent('navigate-on-clicking', {
+// AFRAME.registerComponent('navigate-on-clicking', {
   
 
-  init: function () {
-    el.addEventListener('mousedown', function () {
-      window.location = "http://floral.at";
-    });
-  }
-});  
+//   init: function () {
+//     el.addEventListener('mousedown', function () {
+//       window.location = "http://floral.at";
+//     });
+//   }
+// });  
 
 // AFRAME.registerComponent('Facebook', {
 //   events: {
