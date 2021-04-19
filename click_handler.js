@@ -52,7 +52,9 @@
 //   }
 // });
 
-
+function myFunction() {
+  window.location = "http://floral.at";           // Function returns the product of a and b
+}
 
 
 
