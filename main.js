@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const raccoon = await loadGLTF('first4.gltf');
-    raccoon.scene.scale.set(1, 1, 1);
-    raccoon.scene.position.set(0.7, 0.7, 0);
-    raccoon.scene.rotation.x += 1.5;
+    const cardText = await loadGLTF('first4.gltf');
+    cardText.scene.scale.set(1, 1, 1);
+    cardText.scene.position.set(0.7, 0.7, 0);
+    cardText.scene.rotation.x += 1.5;
 
     const anchor = mindarThree.addAnchor(0);
-    anchor.group.add(raccoon.scene);
+    anchor.group.add(cardText.scene);
 
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
