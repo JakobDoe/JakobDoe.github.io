@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
-      imageTargetSrc: 'Debitkarte_new.mind'
+      imageTargetSrc: 'blackDebit.mind'
     });
     const {renderer, scene, camera} = mindarThree;
 
