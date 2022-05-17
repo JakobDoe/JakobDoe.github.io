@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const cardText = await loadGLTF('first4.gltf');
-    cardText.scene.scale.set(1.3, 1.3, 1.3);
+    cardText.scene.scale.set(1.8, 1.8, 1.8);
     cardText.scene.position.set(0.7, 0.7, 0);
     cardText.scene.rotation.x += 1.5;
 
